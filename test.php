@@ -163,7 +163,46 @@
     
     echo substr($cadena2, 0,6)."\n";
 
-    echo str_replace("días","noches",$cadena2); //reemplazar palabras en cadenas
+    echo str_replace("días","noches",$cadena2)."\n"; //reemplazar palabras en cadenas
+
+    //arreglos 
+    $array = [10,20,30,40,50];
+    $array[]="santy";
+    $array[]=true;
+    $array[]=3;
+    $array[]=4;
+
+    echo $array[7]."\n";
     
+    //permite arreglos con indicees especificos
+
+    $datos = [
+        'nombre' => "santy",
+        'apellido' => "tinty",
+        'numero' => 1212,
+
+    ];
+
+    echo $datos['numero']."\n";
+
+    //funciones para arrays
+
+    list(,,,,,,$a,$b,$c) = $array; //sacar variables a partir de elementos de un array
+    echo $a."\n";
+    echo $b."\n";
+    
+    $array2 = range(5,10); //llenar array con rango de valores
+    var_dump($array2); 
+
+    echo count($array2)."\n"; //contar elementos 
+
+    unset($array2[2]); //borrar elemento de un array
+
+    if(in_array(7,$array2)){ //preguntar si contiene el elemento
+        echo "7 esta dentro del arreglo \n";
+
+    }
+
+
 
 ?>
